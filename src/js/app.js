@@ -12,7 +12,7 @@ function x(children, self) {
   const ul = $("<ul>");
   children.map((child) => {
     let text = isMultiLevel(child) ? Object.keys(child)[0] : child.name;
-    let li = $(`<li>${text}</li>`);
+    let li = $(`<li><span>${text}</span></li>`);
     $(ul).append(li).appendTo(self);
 
     if (isMultiLevel(child)) {
